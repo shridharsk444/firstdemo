@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    body {
+    background-color:blue;
+    color:grey;
+    border:1px solid black;
+    font-size:60px;
+    }
+</head>
+<body>
+<div class="container" align="center">
+    <h1>Students Info</h1><hr>
+    {% if students %}
+    {%for student in students%}
+    <h2>{{student.name}} Information</h2><hr>
+    <ul>
+        <li>student rollno:{{student.rollno}}</li>
+        <li>student dob:{{student.dob}}</li>
+        <li>student marks:{{student.marks}}</li>
+        <li>student email:{{student.email}}</li>
+        <!--<li>student phonenumber:{{student.phonenumber}}</li>-->
+        <li>student adds:{{student.adds}}</li>
+    </ul>
+    <br>
+    {%endfor%}
+    {%else%}
+    <p>The students record not available</p>
+    {%endif%}
+    </div>
+</body>
+</html>
+
+
+
+
